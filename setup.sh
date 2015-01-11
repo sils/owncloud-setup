@@ -3,11 +3,11 @@
 MYSQL_ROOT_PASSWORD="secret one"
 
 docker pull sils1297/centos-owncloud
-docker pull mysql
+docker pull sils1297/mysql
 
 echo "Starting mysql container..."
 docker run --name="owncloud-mysql" --restart=always \
--e MYSQL_ROOT_PASSWORD="$MYSQL_ROOT_PASSWORD" -d mysql
+-e MYSQL_ROOT_PASSWORD="$MYSQL_ROOT_PASSWORD" -d sils1297/mysql
 
 echo "Starting owncloud container..."
 docker run --name="owncloud" --restart=always --link owncloud-mysql:mysql -d \
