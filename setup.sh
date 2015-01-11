@@ -1,3 +1,5 @@
+#!/bin/bash
+
 MYSQL_ROOT_PASSWORD="secret one"
 
 docker pull sils1297/centos-owncloud
