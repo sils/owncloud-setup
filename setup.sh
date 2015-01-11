@@ -7,7 +7,7 @@ docker pull mysql
 
 echo "starting mysql container..."
 docker run --name="owncloud-mysql" --restart=always \
--e MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD -d mysql
+-e MYSQL_ROOT_PASSWORD="$MYSQL_ROOT_PASSWORD" -d mysql
 
 echo "starting owncloud container..."
 docker run --name="owncloud" --restart=always --link owncloud-mysql:mysql -d \
