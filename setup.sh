@@ -1,10 +1,6 @@
 #!/bin/bash
 
-MYSQL_ROOT_PASSWORD="secret one"
-MYSQL_NAME="owncloud-mysql"
-MYSQL_DATA_NAME="owncloud-mysql-data"
-OWNCLOUD_NAME="owncloud"
-OWNCLOUD_DATA_NAME="owncloud-data"
+source owncloud-config.sh
 
 docker pull sils1297/centos-owncloud
 docker pull sils1297/mysql
